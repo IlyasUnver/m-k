@@ -1,0 +1,116 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Murat Koçyiğit | Hilti</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-menu">
+            <i class="fa-solid fa-phone"><a href=""> +905539929922</a></i>
+            <i class="fa-solid fa-envelope"><a href=""> muratkocyigit@gmail.com</a></i>
+        </div>
+        <div class="header-menu-links">
+            <i class="fa-brands fa-square-facebook fa-2x"><a href="facebook.com" target="_blank"></a></i>
+            <i class="fa-brands fa-instagram fa-2x"><a href="instagram.com" target="_blank"></a></i>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <i class="fa-brands fa-css3 fa-3x"></i>
+        </div>
+        <div class="navbar-menu">
+            <ul id="menuItems">
+                <li>
+                    <a href="">Anasayfa</a>
+                    <a href="">Hakkımızda</a>
+                    <a href="">Hizmetlerimiz</a>
+                    <a href="">İletişim</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="slider">
+        <img src="./images/resim1.jpg" alt="" style="width: 70%;">
+        <img src="./images/resim2.jpg" alt="" style="width: 70%;">
+        <img src="./images/resim3.jpg" alt="" style="width: 70%;">
+    </div>
+    <button id="previousBtn"><i class="fa-sharp fa-solid fa-arrow-left fa-2x"></i></button>
+    <button id="nextBtn"><i class="fa-solid fa-arrow-right fa-2x"></i></button>
+
+    <div class="container">
+        <div class="boxes">
+            <div class="box">
+                <h2>Hakkımızda</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, tempore.</p>
+
+                <a href="" class="sBtn">İncele</a>
+            </div>
+            <div class="box">
+                <h2>Hizmetlerimiz</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, tempore.</p>
+
+                <a href="" class="sBtn">İncele</a>
+            </div>
+            <div class="box">
+                <h2>İletişim</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, tempore.</p>
+
+                <a href="" class="sBtn">İncele</a>
+            </div>
+        </div>
+    </div>
+    <p style="display: flex; justify-content: center; padding: 7.5px 0px; background-color: #2a2438;">Created by İlyas
+        Ünver</p>
+
+    <script>
+        var sliderIndex = 0;
+        var slides = document.querySelectorAll('.slider img');
+        var slideInterval = 6000;
+
+        function showSlide(index) {
+            slides.forEach(function (slide) {
+                slide.style.display = 'none';
+            });
+
+            slides[index].style.display = 'block';
+        }
+
+        function nextSlide() {
+            sliderIndex++;
+            if (sliderIndex >= slides.length) {
+                sliderIndex = 0;
+            }
+            showSlide(sliderIndex);
+        }
+
+        function previousSlide() {
+            sliderIndex--;
+            if (sliderIndex < 0) {
+                sliderIndex = slides.length - 1;
+            }
+            showSlide(sliderIndex);
+        }
+
+        function startSlider() {
+            setInterval(nextSlide, slideInterval);
+        }
+
+        showSlide(sliderIndex);
+        startSlider();
+
+        document.getElementById('previousBtn').addEventListener('click', previousSlide);
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+
+    </script>
+</body>
+
+</html>
