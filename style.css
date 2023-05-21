@@ -380,4 +380,8 @@ form {
         height: 30%;
         margin: 20px 0px;
     }
-} 
+    .pop-up-container{
+        width: 40%;
+        height: 10%;
+    }
+}
