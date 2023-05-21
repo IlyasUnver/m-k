@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Murat Koçyiğit | Anasayfa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-menu">
+            <i class="fa-solid fa-phone"><a href=""> +905539929922</a></i>
+            <i class="fa-solid fa-envelope"><a href=""> muratkocyigit@gmail.com</a></i>
+        </div>
+        <div class="header-menu-links">
+            <i class="fa-brands fa-square-facebook fa-2x"><a href="facebook.com" target="_blank"></a></i>
+            <i class="fa-brands fa-instagram fa-2x"><a href="instagram.com" target="_blank"></a></i>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <h2>Murat Koçyiğit</h2>
+        </div>
+        <div class="navbar-menu">
+            <ul id="menuItems">
+                <li>
+                    <a href="./index.html">Anasayfa</a>
+                    <a href="./about.html">Hakkımızda</a>
+                    <a href="./services.html">Hizmetlerimiz</a>
+                    <a href="./contact.html">İletişim</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="slider">
+        <img src="./images/resim1.jpg" alt="" style="width: 70%;">
+        <img src="./images/resim2.jpg" alt="" style="width: 70%;">
+        <img src="./images/resim3.jpg" alt="" style="width: 70%;">
+    </div>
+    <button id="previousBtn"><i class="fa-sharp fa-solid fa-arrow-left fa-2x"></i></button>
+    <button id="nextBtn"><i class="fa-solid fa-arrow-right fa-2x"></i></button>
+
+    <div class="container">
+        <div class="boxes">
+            <div class="box">
+                <h2>Hakkımızda</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, tempore.</p>
+
+                <a href="" class="sBtn">İncele</a>
+            </div>
+            <div class="box">
+                <h2>Hizmetlerimiz</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, tempore.</p>
+
+                <a href="" class="sBtn">İncele</a>
+            </div>
+            <div class="box">
+                <h2>İletişim</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, tempore.</p>
+
+                <a href="" class="sBtn">İncele</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="contact-box">
+            <h2>Hakkımızda</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquid laboriosam ullam tempora quaerat!
+                Similique laudantium ut odit, voluptatum ipsam vero, amet voluptatibus quo ab tenetur adipisci, rerum
+                recusandae repellendus? Obcaecati officia expedita atque eius quas in et, quia, maiores cupiditate
+                nesciunt voluptatem tempora quibusdam eligendi quos explicabo deleniti. Officiis hic laborum repellat
+                non dolore quo, modi sint facere saepe odit recusandae repellendus in labore rem est nemo, repudiandae
+                laudantium aperiam perspiciatis id porro assumenda sequi eius nesciunt. Qui, quos, voluptates eaque iste
+                alias ullam quod et reiciendis provident impedit deserunt, fuga doloremque? Maxime beatae minus corporis
+                cumque consequuntur nemo.</p>
+        </div>
+        <div class="contact-box">
+            <h2>İletişim</h2>
+            <i class="fa-solid fa-location-dot" style="display: flex; gap: 5px; padding: 20px 0px;">
+                <h3>Adres</h3>
+            </i>
+            <p>Necip Fazıl Mahallesi Aybars Caddesi Yiğitler Sokak No 19/B Yenimahalle/ANKARA</p>
+            <i class="fa-solid fa-phone" style="display: block; padding: 50px 0px;"><a href=""> +905539929922</a></i>
+            <i class="fa-solid fa-envelope"><a href=""> muratkocyigit@gmail.com</a></i>
+        </div>
+        <div class="contact-box">
+            <h2>Sosyal Medya</h2>
+            <i class="fa-brands fa-square-facebook fa-2x" style="padding: 20px 0px; display: block;"><a
+                    href="facebook.com" target="_blank"></a></i>
+            <i class="fa-brands fa-instagram fa-2x"><a href="instagram.com" target="_blank"></a></i>
+        </div>
+    </div>
+
+    <p id="footer-about">Created by İlyas
+        Ünver</p>
+    <div class="pop-up-container" style="cursor: pointer;">
+        <i class="fa-brands fa-whatsapp fa-5x" style="cursor: pointer;"><a href=""></a></i>
+        <div class="popup">
+            <a href="">Murat Koçyiğit</a>
+            <p>Çevrimiçi</p>
+        </div>
+    </div>
+
+    <script>
+        var sliderIndex = 0;
+        var slides = document.querySelectorAll('.slider img');
+        var slideInterval = 6000;
+
+        function showSlide(index) {
+            slides.forEach(function (slide) {
+                slide.style.display = 'none';
+            });
+
+            slides[index].style.display = 'block';
+        }
+
+        function nextSlide() {
+            sliderIndex++;
+            if (sliderIndex >= slides.length) {
+                sliderIndex = 0;
+            }
+            showSlide(sliderIndex);
+        }
+
+        function previousSlide() {
+            sliderIndex--;
+            if (sliderIndex < 0) {
+                sliderIndex = slides.length - 1;
+            }
+            showSlide(sliderIndex);
+        }
+
+        function startSlider() {
+            setInterval(nextSlide, slideInterval);
+        }
+
+        showSlide(sliderIndex);
+        startSlider();
+
+        document.getElementById('previousBtn').addEventListener('click', previousSlide);
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+
+    </script>
+</body>
+
+</html>
