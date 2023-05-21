@@ -89,8 +89,9 @@ body {
 #nextBtn {
     width: 30px;
     height: 40px;
-    background-color: none;
-    border-radius: none;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 15px;
     position: absolute;
     top: 45%;
     left: 83%;
@@ -99,7 +100,9 @@ body {
 #previousBtn {
     width: 30px;
     height: 40px;
-    background-color: none;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 15px;
     position: absolute;
     top: 45%;
     left: 15.5%;
