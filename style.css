@@ -119,6 +119,8 @@ button {
 .about {
     width: 70%;
     margin: auto;
+    background-color: #352f44;
+    margin-top: 15px;
 }
 
 .about img{
@@ -175,7 +177,7 @@ button {
 .services-boxes {
     display: flex;
     padding: 25px;
-    background-color: #2a2438;
+    background-color: #352f44;
     margin: 25px;
 }
 
