@@ -338,6 +338,20 @@ form {
     background-color: #25D366;
 }
 
+.pop-up-container-2{
+    position: fixed;
+    top: 78%;
+    right: 1.5%;
+    z-index: 1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .box img{
     width: 300px;
     height: 300px;
@@ -467,6 +481,10 @@ form {
     .pop-up-container{
         width: 50%;
         height: 10%;
+    }
+
+    .pop-up-container-2{
+        display: none;
     }
 
     .works-alt{
