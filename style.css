@@ -374,6 +374,11 @@ form {
         padding: 15px;
     }
 
+    .about{
+        width: 100%;
+        border: 1px solid;
+    }
+
     .boxes {
         display: block;
     }
@@ -382,7 +387,9 @@ form {
         display: none;
     }
 
-
+    .container{
+        width: 100%;
+    }
 
     .navbar ul li a {
         padding: 0px;
@@ -424,6 +431,8 @@ form {
 
     .contact {
         display: block;
+        width: 100%;
+        padding: 15px;
         align-items: center;
         justify-content: center;
     }
